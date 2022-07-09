@@ -58,7 +58,7 @@ class _AuthMenu extends State<AuthMenu>{
                      ),
                    ),
                    SizedBox(height: 20),
-                   Text(
+                   const Text(
                      'rent a bike',
                      style: TextStyle(
                        fontSize: 40,
@@ -72,11 +72,11 @@ class _AuthMenu extends State<AuthMenu>{
                future: Authentication.initializeFirebase(context: context),
                builder: (context, snapshot) {
                  if (snapshot.hasError) {
-                   return Text('Error initializing Firebase');
+                   return const Text('Error initializing Firebase');
                  } else if (snapshot.connectionState == ConnectionState.done) {
                    return GoogleSignInButton();
                  }
-                 return CircularProgressIndicator(
+                 return const CircularProgressIndicator(
                    valueColor: AlwaysStoppedAnimation<Color>(
                      Colors.lightGreenAccent,
                    ),

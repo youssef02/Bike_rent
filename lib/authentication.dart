@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:app/mainmenu.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -49,7 +51,7 @@ class Authentication {
 
         user = userCredential.user;
       } catch (e) {
-        print(e);
+        log(e.toString(), name: 'signInWithGoogle');
       }
     } else {
       final GoogleSignIn googleSignIn = GoogleSignIn();

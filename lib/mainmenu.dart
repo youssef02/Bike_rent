@@ -13,7 +13,7 @@ class MainMenu extends StatefulWidget {
 
   User user;
   @override
-  State<MainMenu> createState() => _MainMenu(user.photoURL!!);
+  State<MainMenu> createState() => _MainMenu(user.photoURL!);
 }
 
 class _MainMenu extends State<MainMenu> {
